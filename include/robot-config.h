@@ -1,6 +1,7 @@
 using namespace vex;
 
 extern brain Brain;
+extern controller Controller1;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Text.

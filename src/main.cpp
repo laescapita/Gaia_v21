@@ -9,11 +9,6 @@
 
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // ---- END VEXCODE CONFIGURED DEVICES ----
-
-#include "vex.h"
-
-using namespace vex;
-
 #include "vex.h"
 #include "autoFunctions.h"
 #include "userFunctions.h"
@@ -44,7 +39,16 @@ void userControl( void )
 {
   Brain.Screen.newLine();
   Brain.Screen.print("Mecanum Drive");
+  
+  while(true)
+  {
+     int Ax1Pos = Controller1.Axis1.position();
+     int Ax3Pos = Controller1.Axis3.position();
+     int Ax4Pos = Controller1.Axis4.position();
 
+     //Actual Joystick Drive and Buttons
+     //joyStickDrive(Ax1Pos, Ax3Pos, Ax4Pos);
+  }
  
  vex::task::sleep(20);
 
